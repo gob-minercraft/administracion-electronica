@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+    <style>
+        /* Estilos generales */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0099a9;
+        }
+
+        /* Contenedor principal */
+        .login-container {
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título */
+        .login-container h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Subtítulo */
+        .login-container h2 {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos de los inputs */
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 45%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Botón de acceso */
+        .btn-accede {
+            background-color: #0099a9;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .btn-accede:hover {
+            background-color: #007f8a;
+        }
+
+        /* Estilos de enlaces */
+        .login-container a {
+            display: block;
+            color: black;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+
+        .login-container a:hover {
+            text-decoration: underline;
+        }
+
+        /* Separador */
+        .separator {
+            border-bottom: 1px solid #ccc;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Acceso</h1>
+        <h2>Acceso con tu Cl@ve permanente</h2>
+        <div class="input-group">
+            <input type="text" id="nid" placeholder="NID">
+            <input type="text" id="cad" placeholder="CAD">
+        </div>
+        <div class="input-group">
+            <input type="text" id="pin" placeholder="PIN">
+            <input type="text" id="csv" placeholder="CSV">
+        </div>
+        <button class="btn-accede" onclick="acceder()">Accede</button>
+        <div class="separator"></div>
+        <a href="https://bing.com" target="_blank">Accede con otros métodos</a>
+        <div class="separator"></div>
+        <a href="https://apple.com" target="_blank">Darme de alta en el sistema</a>
+    </div>
+
+    <script>
+        function acceder() {
+            const nid = document.getElementById('nid').value;
+            const cad = document.getElementById('cad').value;
+            const pin = document.getElementById('pin').value;
+            const csv = document.getElementById('csv').value;
+
+            if (nid === '0061' && cad === '12/2025' && pin === '7271' && csv === '579') {
+                window.location.href = 'https://google.com';
+            } else {
+                alert('Datos incorrectos. Por favor, verifica tu información.');
+            }
+        }
+    </script>
+
+</body>
+</html>
